@@ -3,30 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/quizTitle"
-        android:layout_width="0dp"
-        android:layout_height="91dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="323dp"
+        android:layout_height="56dp"
         android:text="@string/quiz_instructions"
-        android:textSize="50sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/quizSubTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/quizSubTitle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_bias="0.51" />
 
     <TextView
         android:id="@+id/quizSubTitle"
-        android:layout_width="0dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/swipe_right_for_true_swipe_left_for_false"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/rvQuiz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,14 +35,15 @@
         android:id="@+id/rvQuiz"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="210dp"
-        android:clipToPadding="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="0dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizSubTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/quizSubTitle">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
