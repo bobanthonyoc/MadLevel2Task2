@@ -1,5 +1,7 @@
 package com.example.madlevel2task2
 
+import androidx.recyclerview.widget.ItemTouchHelper
+
 data class Quiz( var quizText: String)
 
 object Supplier {
@@ -10,4 +12,7 @@ object Supplier {
         Quiz("A Unit in Kotlin corresponds to a void in Java"),
         Quiz("In Kotlin 'when' replaces the 'switch' operator in Java")
     )
+
+    private const val correct = ItemTouchHelper.RIGHT
+    private const val incorrect = ItemTouchHelper.LEFT
 }
